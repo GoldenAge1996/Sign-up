@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: steelblue;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+
+.container h1{
+text-align: center;
+margin-bottom: 20px;
+}
+
+.form-control{
+    position: relative;
+    margin: 20px 0 30px;
+    /* width: 300px; */
+
+}
+
+.form-control input{
+background-color: transparent;
+border: none;
+border-bottom: 2px solid white;
+width: 100%;
+display: block;
+color: white;
+padding: 5px 0;
+}
+
+.btn{
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: lightblue;
+    cursor: pointer;
+}
+.btn:active{
+    transform: scale(0.98);
+}
+
+.text{
+    margin-top: 15px;
+    font-size: 10px;
+}
+
+.text a{
+    text-decoration: none;
+    color: lightblue;
+}
+
+.form-control input:focus, .form-control input:valid{
+    outline: none;
+    border-bottom-color: lightblue;
+}
+
+.form-control label{
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+.form-control label span{
+   display: inline-block;
+   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-control input:focus + label span , .form-control input:valid + label span{
+    color: lightblue;
+    transform: translateY(-20px);
+}
+
+
+
+@media(max-width: 700px){
+    .form-control{
+        margin: 20px 0 30px;
+        /* width: 150px; */
+    }
+
+.container h1{
+    font-size: 20px;
+}
+
+    .form-control input{
+        font-size: 12px;
+    }
+}
